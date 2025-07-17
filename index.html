@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Poster Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Poster Generator</h1>
+        <button class="download-btn" id="downloadAllBtn" style="display: none;">Download All</button>
+    </header>
+
+    <div class="main-content-container">
+        <div class="image-results-section">
+            <p id="promptMessage">Enter a prompt below to generate posters!</p>
+            <div class="image-box" id="imageBox">
+                <div class="placeholder" id="placeholder1"></div>
+                <div class="placeholder" id="placeholder2"></div>
+                <div class="placeholder" id="placeholder3"></div>
+            </div>
+            <button class="generate-more-btn" id="generateMoreBtn" style="display: none;">Generate more results</button>
+        </div>
+
+        <div class="prompt-section">
+            <label for="promptInput">Generate New Prompt</label>
+            <div class="input-box">
+                <input type="text" id="promptInput" placeholder="Input your prompt here">
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+        </div>
+
+        <div id="loadingMessage" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <span>Generating your posters... this may take a moment.</span>
+        </div>
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
