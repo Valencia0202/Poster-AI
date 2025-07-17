@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start live server",
+            "type": "shell",
+            "command": "npx live-server",
+            "options": {
+                "cwd": "${workspaceFolder}/frontend"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "detail": "Starts the Live Server for the frontend"
+        },
+        {
+            "type": "Live Preview",
+            "workspacePath": "c:\\Users\\Valen\\Desktop\\Poster-Generator",
+            "problemMatcher": [],
+            "label": "Live Preview: Run Server"
+        }
+    ]
+}

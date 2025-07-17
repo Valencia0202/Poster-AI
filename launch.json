@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Backend Server",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/backend/server.js",
+            "cwd": "${workspaceFolder}/backend",
+            "envFile": "${workspaceFolder}/backend/.env",
+            "restart": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Launch Frontend (Live Server)",
+            "url": "http://127.0.0.1:5500/frontend/index.html",
+            "webRoot": "${workspaceFolder}/frontend",
+            "preLaunchTask": "start live server"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full Stack Dev",
+            "configurations": ["Launch Backend Server", "Launch Frontend (Live Server)"]
+        }
+    ]
+}
